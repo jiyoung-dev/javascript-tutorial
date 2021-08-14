@@ -1,8 +1,12 @@
 const clock = document.querySelector("h2#clock");
 
-function sayHello(){
-  console.log("hello");
+function getClock(){
+  const date = new Date();
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+  clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 
-// setInterval(sayHello, 5000);  // delay 간격 만큼 함수를 반복적으로 호출 
-setTimeout(sayHello, 5000);  // delay 후에 함수 호출 (반복호출 아님)
+getClock();
+setInterval(getClock, 1000);  // 0:28:0 
