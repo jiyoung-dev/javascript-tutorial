@@ -7,10 +7,15 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <div id="login-form">
-      <input type="text" placeholder="What is your name?" />
+    <form id="login-form">
+      <!-- required 속성을 사용하면 submit버튼을 누르기전에 데이터가 입력되어 있어야한다.-->
+      <input 
+      required  
+      maxlength="15"
+      type="text" 
+      placeholder="What is your name?" />
       <button>Log In</button>
-    </div>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>
