@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>Title!</h1>
+    <script>
+    const h1 = document.querySelector("h1");
+
+    // 클릭시, 두가지 색상 번갈아 나타나게 구현 
+    function clickEvent(){
+    /* if (h1.style.color === "blue"){
+        h1.style.color = "red";
+      } else{
+        h1.style.color = "blue";
+      } */
+
+      // 개선된 코드 
+      const currentColor = h1.style.color;
+      let newColor;
+      if (currentColor === "blue"){
+        newColor = "red";
+      } else{
+        newColor = "blue";
+      }
+      h1.style.color = newColor;
+    }
+
+    // title.onclick = clickEvent;
+    h1.addEventListener("click", clickEvent);
+
+    </script>
+</body>
+</html>
