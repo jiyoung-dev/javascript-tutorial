@@ -8,6 +8,7 @@ function onLoginSubmit(event) {
   event.preventDefault(); // 브라우저의 기본동작을 막아주는 함수 
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
