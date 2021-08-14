@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>Title!</h1>
+    <script>
+     const title = document.querySelector("h1");
+
+     function clickEvent(){
+       title.innerText = "Title need color!!!"
+     }
+
+     function mouseEnterEvent(){
+       title.style.color = "red";
+     }
+
+     function mouseLeaveEvnet(){
+       title.style.color = "black";
+     }
+
+     function resizeWindowColor(){
+       document.body.style.backgroundColor = "beige";
+     }
+
+     function handleWindowCopy(){
+       alert("복사되었습니다.");
+     } 
+      
+     function alertWindowOffline(){
+       alert("오프라인 상태입니다.");
+     }
+
+     function alertWindowOnline(){
+       alert("온라인 상태입니다.");
+     }
+
+     // title.onclick = clickEvent;
+     title.addEventListener("click", clickEvent);
+     title.addEventListener("mouseenter", mouseEnterEvent);
+     title.addEventListener("mouseleave", mouseLeaveEvnet);
+     window.addEventListener("resize", resizeWindowColor);
+     window.addEventListener("copy", handleWindowCopy);
+     window.addEventListener("offline", alertWindowOffline);
+     window.addEventListener("online", alertWindowOnline);
+
+    </script>
+</body>
+</html>
