@@ -2,19 +2,24 @@ const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("#todo-form input");
 
-// todo 만들어주는 함수 
+// todo 삭제함수 
+function deleteToDo(event){
+  const deleteTarget = event.target.parentElement;
+  deleteTarget.remove();
+}
+
+// todo 생성함수 
 function paintToDo(newTodo){
-  // console.log("here will be todo", newTodo);
-  // html에 newTodo를 담아서 li>span 태그를 뿌려주자 
   const li = document.createElement("li");
   const span = document.createElement("span");
   li.appendChild(span);
   span.innerText = newTodo;
-  // console.log(li);
+  // todo 삭제버튼 추가 
+  const button = document.createElement("button");
+  button.innerText = "❌";
+  button.addEventListener("click", deleteToDo);
+  li.appendChild(button);
   toDoList.appendChild(li);
-  console.log(toDoList);
-  // 1. 리스트 삭제 구현 
-  // 2. 새로고침해도 todo 남아있게 해야함 
 }
 
 // submit의 기본동작 (새로고침) 방지 
