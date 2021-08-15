@@ -9,4 +9,4 @@ function getClock(){
 }
 
 getClock();
-setInterval(getClock, 1000);  // 0:28:0 
+setInterval(getClock, 1000);  
