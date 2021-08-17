@@ -31,7 +31,7 @@ const quotes = [
   },
   {
     quote:"Be patient and tough: some day this pain will be useful to you.",
-    author:"푸블리우스 오비디우스 나소",
+    author:"Publius Ovidius Naso",
   },
 ];  // 8개 
 
@@ -41,5 +41,5 @@ const author = document.querySelector("#quote span:last-child");
 // Math.random() 사용 -> quotes 인덱스 자리에 범위에 맞는 랜덤한 자연수 오도록 작성 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `"${todaysQuote.quote}"`;
+author.innerText = `- ${todaysQuote.author} -`;
