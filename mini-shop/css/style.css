@@ -1,0 +1,89 @@
+:root {
+  /* color */
+  --color-black: #263238;
+  --color-blue: #1e88e5;
+  --color-yellow: #fdd835;
+  --color-pink: #f06292;
+
+  /* size */
+  --width-clothes: 15%;
+  --width-list-clothes: 10%;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: thistle;
+  margin-bottom: 3%;
+}
+
+li img {
+  width: var(--width-list-clothes);
+  margin: 2% 2% 2%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  width: 60%;
+  height: 60%;
+  overflow-y: scroll;
+  padding-left: 0;
+}
+
+.tshirt {
+  width: var(--width-clothes);
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.pants {
+  width: var(--width-clothes);
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.skirt {
+  width: var(--width-clothes);
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+.blue-btn {
+  margin-right: 5%;
+  background-color: var(--color-blue);
+}
+
+.yellow-btn {
+  margin-right: 5%;
+  background-color: var(--color-yellow);
+}
+
+.pink-btn {
+  margin-right: 5%;
+  background-color: var(--color-pink);
+}
