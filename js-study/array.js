@@ -148,3 +148,9 @@ const num14 = [[0, 1], [2, 3], [4, 5]];
 // 배열의 가장 오른쪽 원소부터 함수를 돌린다. 
 const result14 = num14.reduceRight((accumulator, currentValue) => accumulator.concat(currentValue));
 console.log(result14); // [ 4, 5, 2, 3, 0, 1 ]
+
+// 15. find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
+// 주어진 판별함수를 만족하는 첫번째 요소 값을 반환, 없는경우 undefined
+const num15 = [5, 12, 8, 130, 44];
+const found = num15.find(element => element > 10);
+console.log(found);  // 12 (함수를 만족하는 첫번째 요소)
