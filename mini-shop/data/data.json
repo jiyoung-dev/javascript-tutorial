@@ -96,14 +96,14 @@
       "gender": "male",
       "size": "small",
       "color": "blue",
-      "image": "../img/pink_b.png"
+      "image": "../img/blue_t.png"
     },
     {
       "type": "tshirt",
       "gender": "male",
       "size": "large",
       "color": "yellow",
-      "image": "../img/pink_y.png"
+      "image": "../img/yellow_t.png"
     }
   ]
 }

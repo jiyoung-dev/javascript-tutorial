@@ -7,11 +7,28 @@ function loadItems(){
     .then(json => json.items); 
 }
 
+// items -> html상에 표시
+function displayItems(items){
+  const ul = document.querySelector('.items');
+  // items 내의 모든 요소에 대해 createHTML 함수를 호출해, 새로운 배열 반환
+  ul.innerHTML = items.map(item => createHTML(item)).join('');
+}
+
+// items 리스트 담은 li태그 반환
+function createHTML(item){
+  return `
+  <li>
+    <img src=${item.image} alt=${item.type} class="item_thumb">
+    <span class="item_description">${item.gender}, ${item.size}</span>
+  </li>
+  `;
+}
+
 // main
 loadItems()
   .then(items => {
     console.log(items);
-    // displayItems(items);
+    displayItems(items);
     // setEventListeners(items)
   })
-  .catch(console.log);
+  .catch(console.log('error'));
